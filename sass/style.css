@@ -1,11 +1,13 @@
-/* Standard */
+/* General */
 * {
   margin: 0;
   padding: 0;
 }
 
-.fixed html,
+html,
 body {
+  padding: 0;
+  margin: 0;
   font-size: 16px;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
@@ -24,6 +26,48 @@ body {
 .btn-theme:hover {
   background-color: #0E153D;
   color: #FFFFFF;
+}
+
+.white-btn {
+  color: #20D3C2;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 10px 25px;
+  margin: 15px 0px;
+}
+.white-btn:hover {
+  background-color: #20D3C2;
+  color: #FFFFFF;
+  border: none;
+}
+
+.text-section {
+  color: #0E153D;
+  text-align: center;
+}
+.text-section h1 {
+  font-family: Play;
+  font-size: 36px;
+  font-weight: 700;
+}
+.text-section h1 span {
+  color: #20D3C2;
+}
+.text-section p {
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.grid-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #0E153D;
+  font-size: 18px;
 }
 
 /* Top menu */
@@ -47,6 +91,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   /* Languange and Currency Settings */
+  /* Top right links and socials */
 }
 .top-header > .container .localization {
   display: flex;
@@ -113,9 +158,12 @@ body {
   border: 1px solid #E3E3E3;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-  font-size: 16;
+  font-size: 16px;
   width: 100%;
   text-indent: 25px;
+}
+.main-header > .container .search input[type=text]:focus {
+  outline: none;
 }
 .main-header > .container .search button {
   color: #FFFFFF;
@@ -163,7 +211,7 @@ body {
 .main-header nav > .container .categories {
   flex: 2;
 }
-.main-header nav > .container .categories button {
+.main-header nav > .container .categories .dropdown button {
   background-color: #20D3C2;
   color: #FFFFFF;
   border: none;
@@ -174,22 +222,208 @@ body {
   align-items: center;
   padding: 0.7rem 1rem;
 }
-.main-header nav > .container .categories button:hover {
+.main-header nav > .container .categories .dropdown button:hover {
   background-color: #0E153D;
   color: #FFFFFF;
 }
-.main-header nav > .container .categories button > span > i {
-  font-size: 1.2em;
-}
-.main-header nav > .container .categories button span {
+.main-header nav > .container .categories .dropdown button span {
   display: flex;
   align-items: center;
+}
+.main-header nav > .container .categories .dropdown button span i {
+  font-size: 1.2em;
+}
+.main-header nav > .container .categories .dropdown .dropdown-menu {
+  padding: 5;
+  width: 100%;
+  background-color: #20D3C2;
+  border-radius: 0;
+  border: none;
+}
+.main-header nav > .container .categories .dropdown .dropdown-menu .dropdown-item {
+  background-color: #20D3C2;
+  color: #FFFFFF;
+}
+.main-header nav > .container .categories .dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: #0E153D;
 }
 .main-header nav > .container .special-offer {
   flex: 7;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.shopping-banner {
+  background-color: #EEEEEE;
+}
+.shopping-banner .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopping-banner .container .shopping-text {
+  width: 30%;
+}
+.shopping-banner .container .shopping-text .shopping-header {
+  font-size: 60px;
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+.shopping-banner .container .shopping-text .shopping-header .shopping-bold {
+  font-weight: 700;
+  color: #20D3C2;
+}
+
+.shopping-benefits .container {
+  display: flex;
+  max-width: 1650px;
+  justify-content: space-evenly;
+  padding: 6rem 0;
+}
+.shopping-benefits .container .benefits {
+  background-color: #EDFCFA;
+  border-radius: 8px;
+  padding: 1.3rem;
+  display: flex;
+  align-items: center;
+  margin: 0 1.4rem;
+  flex: 1;
+}
+.shopping-benefits .container .benefits:hover {
+  background-color: #20D3C2;
+  color: #FFFFFF;
+}
+.shopping-benefits .container .benefits:hover img {
+  filter: brightness(0) invert(1);
+}
+.shopping-benefits .container .benefits:hover h1 {
+  color: #FFFFFF;
+}
+.shopping-benefits .container .benefits img {
+  margin-right: 1.5rem;
+}
+.shopping-benefits .container .benefits h1 {
+  color: #20D3C2;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.shop-by-category .container .grid {
+  display: grid;
+  padding-bottom: 6rem;
+  gap: 0.7rem;
+  grid-template-columns: repeat(5, minmax(100px, 249px));
+  grid-template-rows: repeat(3, minmax(100px, 249px));
+}
+.shop-by-category .container .grid .category-box {
+  position: relative;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.shop-by-category .container .grid .category-box .category-box-title {
+  width: 50%;
+  border-radius: 0 8px 0 0;
+  color: #20D3C2;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+.shop-by-category .container .grid #category-box-2 {
+  grid-column: span 2;
+}
+.shop-by-category .container .grid #category-box-3 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.shop-by-category .container .grid #category-box-4 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.shop-by-category .container .grid #category-box-6 {
+  grid-column: span 2;
+}
+
+.new-arrivals .container .grid-new-arrivals {
+  padding: 1rem 0 8rem 0rem;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, minmax(100px, 400px));
+}
+.new-arrivals .container .grid-new-arrivals .category-box {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #EEEEEE;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.new-arrivals .container .grid-new-arrivals .category-box .new-box-title {
+  width: 100%;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0.8rem 1.5rem;
+}
+
+.discount {
+  background-color: #CCCCCC;
+}
+.discount .container {
+  height: 26.125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.discount .container .discount {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+  background-color: #20D3C2;
+  color: #FFFFFF;
+}
+.discount .container .discount h1 {
+  font-family: "Play", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+}
+.discount .container .discount h1 span {
+  font-size: 36px;
+}
+.discount .container .discount p {
+  font-size: 1rem;
+}
+.discount .container .discount button {
+  color: #FFFFFF;
+  background-color: #0E153D;
+  border-radius: 25px;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 10px 25px;
+  margin: 10px 0;
+}
+.discount .container .discount button:hover {
+  background-color: #FFFFFF;
+  color: #20D3C2;
+  border: none;
+}
+.discount .container .learn-more {
+  width: 35%;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.feature .container {
+  padding: 6rem 0 1rem 0rem;
 }
 
 footer {

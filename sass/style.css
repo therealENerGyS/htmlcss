@@ -1,6 +1,7 @@
 /* General */
 html,
 body {
+  width: 100%;
   padding: 0;
   margin: 0;
   font-size: 16px;
@@ -47,7 +48,7 @@ body {
   text-align: center;
 }
 .text-section h1 {
-  font-family: Play;
+  font-family: "Play", sans-serif;
   font-size: 36px;
   font-weight: 700;
 }
@@ -61,23 +62,16 @@ body {
 }
 
 .products-grid {
-  padding: 1rem 0 8rem 0rem;
-  display: grid;
+  padding: 1rem 0 8rem 0;
+  display: flex;
   justify-content: center;
-  grid-template-columns: repeat(1, minmax(100px, 400px));
-}
-.products-grid #box-2 {
-  display: none;
-}
-.products-grid #box-3 {
-  display: none;
 }
 .products-grid .product-box {
   position: relative;
   background-color: #EEEEEE;
   border-radius: 8px;
   height: 100%;
-  width: 100%;
+  width: 26rem;
   overflow: hidden;
 }
 .products-grid .product-box img {
@@ -120,7 +114,7 @@ body {
 .products-grid .product-box .product-body {
   position: absolute;
   bottom: 0;
-  height: 14%;
+  height: 13%;
   padding: 1.2rem;
   color: #FFFFFF;
   z-index: 1;
@@ -168,6 +162,12 @@ body {
   background-color: #0E153D;
   opacity: 0.9;
   transition: height 0.3s ease-in-out;
+}
+.products-grid #box-2 {
+  display: none;
+}
+.products-grid #box-3 {
+  display: none;
 }
 
 .instock {
@@ -426,30 +426,8 @@ body {
   display: grid;
   padding-top: 1rem;
   gap: 0.75rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "Men Women Women Kids Kids" "Kids Hats Kids Kids" "Kids Shoes Sunglasses Sunglasses Watches";
-}
-.shop-by-category .container .grid .Men {
-  grid-area: Men;
-}
-.shop-by-category .container .grid .Women {
-  grid-area: Women;
-}
-.shop-by-category .container .grid .Kids {
-  grid-area: Kids;
-}
-.shop-by-category .container .grid .Shoes {
-  grid-area: Shoes;
-}
-.shop-by-category .container .grid .Sunglasses {
-  grid-area: Sunglasses;
-}
-.shop-by-category .container .grid .Hats {
-  grid-area: Hats;
-}
-.shop-by-category .container .grid .Watches {
-  grid-area: Watches;
+  grid-template-columns: repeat(5, minmax(100px, 249px));
+  grid-template-rows: repeat(3, minmax(100px, 249px));
 }
 .shop-by-category .container .grid .category-box {
   position: relative;
@@ -460,10 +438,6 @@ body {
 }
 .shop-by-category .container .grid .category-box:hover .category-box-title {
   height: 4rem;
-}
-.shop-by-category .container .grid .category-box img {
-  width: 100%;
-  height: 100%;
 }
 .shop-by-category .container .grid .category-box .category-box-title {
   position: absolute;
@@ -487,6 +461,20 @@ body {
   font-size: 0.875rem;
   font-weight: 400;
   color: #FFFFFF;
+}
+.shop-by-category .container .grid #category-box-2 {
+  grid-column: span 2;
+}
+.shop-by-category .container .grid #category-box-3 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.shop-by-category .container .grid #category-box-4 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.shop-by-category .container .grid #category-box-6 {
+  grid-column: span 2;
 }
 
 .new-arrivals {
@@ -869,6 +857,18 @@ footer .container .copyright {
 
 /* Screens Greater than mobile */
 @media (min-width: 768px) {
+  .products-grid {
+    justify-content: space-between;
+  }
+  .products-grid .product-box {
+    width: 22rem;
+  }
+  .products-grid #box-2 {
+    display: block;
+  }
+  .products-grid #box-3 {
+    display: none;
+  }
   .top-header .container {
     justify-content: space-between;
   }
@@ -877,15 +877,6 @@ footer .container .copyright {
   }
   .main-header .container .search {
     display: flex;
-  }
-  .products-grid {
-    grid-template-columns: repeat(2, minmax(100px, 400px));
-  }
-  .products-grid #box-3 {
-    display: grid;
-  }
-  .products-grid #box-2 {
-    display: none;
   }
   .discount-banner .container .discount {
     width: 30%;
@@ -915,6 +906,15 @@ footer .container .copyright {
 }
 /* Screens Greater than tablet */
 @media (min-width: 992px) {
+  .products-grid .product-box {
+    width: 19rem;
+  }
+  .products-grid #box-2 {
+    display: block;
+  }
+  .products-grid #box-3 {
+    display: block;
+  }
   .top-header .container .menu-links .links {
     display: inline;
   }
@@ -935,18 +935,8 @@ footer .container .copyright {
     margin: 0 1.4rem;
   }
   .shop-by-category .container .grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "Men Women Women Kids Kids" "Shoes Shoes Hats Kids Kids" "Shoes Shoes Sunglasses Sunglasses Watches";
-  }
-  .products-grid {
-    grid-template-columns: repeat(3, minmax(100px, 400px));
-  }
-  .products-grid #box-2 {
-    display: grid;
-  }
-  .products-grid #box-3 {
-    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, 249px));
+    grid-template-rows: repeat(3, minmax(100px, 249px));
   }
   .discount-banner .container .discount {
     width: 25%;
@@ -976,5 +966,15 @@ footer .container .copyright {
   }
   .subscribe .container .gray-box {
     width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .products-grid .product-box {
+    width: 23rem;
+  }
+}
+@media (min-width: 1400px) {
+  .products-grid .product-box {
+    width: 26rem;
   }
 }/*# sourceMappingURL=style.css.map */

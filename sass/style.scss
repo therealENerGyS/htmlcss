@@ -28,7 +28,6 @@ $border-radius-rounded: 50%;
 /* General */
 html,
 body {
-    width: 100%;
     padding: 0;
     margin: 0;
     font-size: 1rem;
@@ -53,6 +52,10 @@ body {
         background-color: $color-theme-dark;
         color: $color-white;
     }
+    &:focus {
+        background-color: $color-theme-dark;
+        color: $color-white;
+    }
 }
 
 .white-btn {
@@ -68,7 +71,11 @@ body {
     &:hover {
         background-color: $color-theme;
         color: $color-white;
-        border: none;
+    }
+    &:focus {
+        background-color: $color-theme;
+        color: $color-white;
+        outline:2px solid black;
     }
 }
 
@@ -84,6 +91,9 @@ body {
         span {
             color: $color-theme;
         }
+    }
+    img {
+        user-select: none;
     }
 
     p {
@@ -127,7 +137,7 @@ body {
             position: absolute;
             z-index: 1;
             top: 100%;
-            right: 10%;
+            right: 5%;
             list-style: none;
             margin: auto;
             padding: 0.6rem;
@@ -143,9 +153,38 @@ body {
 
                 a {
                     color: $color-gray-0;
-
+                    display: inline-block;
+                    position: relative;
+                    .tooltiptext {
+                        display:none;
+                    }
                     &:hover {
                         color: $color-theme;
+                        .tooltiptext {
+                            display: block;
+                            width: 125px;
+                            background-color: $color-theme;
+                            color: #fff;
+                            text-align: center;
+                            border-radius: 6px;
+                            font-size: 0.875rem;
+                            padding: 0.313rem 0;
+                            margin: 0 1rem;
+                    
+                            position: absolute;
+                            right: 95%;
+                            z-index: 1;
+                            &::after {
+                                content: " ";
+                                position: absolute;
+                                top: 50%;
+                                left: 100%;
+                                margin-top: -5px;
+                                border-width: 5px;
+                                border-style: solid;
+                                border-color: transparent transparent transparent $color-theme;
+                            }
+                        }
                     }
                 }
             }
@@ -413,6 +452,10 @@ body {
                             background-color: $color-theme-dark;
                             color: $color-white;
                         }
+                        &:focus {
+                            background-color: $color-theme-dark;
+                            color: $color-white;
+                        }
 
                         span {
                             display: flex;
@@ -491,6 +534,7 @@ body {
         padding: 6rem 0;
 
         .benefits {
+            user-select: none;
             background-color: $color-theme-light;
             border-radius: $border-radius-small;
             padding: 1.3rem;
@@ -643,7 +687,10 @@ body {
                 &:hover {
                     background-color: $color-white;
                     color: $color-theme;
-                    border: none;
+                }
+                &:focus {
+                    background-color: $color-white;
+                    color: $color-theme;
                 }
             }
         }
@@ -717,7 +764,7 @@ body {
                     align-items: center;
                     width: 80px;
                     height: 80px;
-                    outline: 2px dashed $color-theme;
+                    border: 2px dotted $color-theme;
                     background-color: white;
                     border-radius: 50%;
                 }
@@ -744,7 +791,7 @@ body {
 
 .top-sell {
     .container {
-        padding: 6rem 0 1rem 0rem;
+        padding: 6rem 0;
 
         .grid-top-sellers {
             padding: 1rem 0;
@@ -783,7 +830,7 @@ body {
 
                 .product-menu {
                     position: absolute;
-                    z-index: 1;
+                    z-index: 2;
                     top: 100%;
                     right: 5%;
                     list-style: none;
@@ -801,9 +848,38 @@ body {
 
                         a {
                             color: $color-gray-0;
-
+                            display: inline-block;
+                            position: relative;
+                            .tooltiptext {
+                                display:none;
+                            }
                             &:hover {
                                 color: $color-theme;
+                                .tooltiptext {
+                                    display: block;
+                                    width: 125px;
+                                    background-color: $color-theme;
+                                    color: #fff;
+                                    text-align: center;
+                                    border-radius: 6px;
+                                    font-size: 0.875rem;
+                                    padding: 0.313rem 0;
+                                    margin: 0 1rem;
+                            
+                                    position: absolute;
+                                    right: 95%;
+                                    z-index: 1;
+                                    &::after {
+                                        content: " ";
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 100%;
+                                        margin-top: -5px;
+                                        border-width: 5px;
+                                        border-style: solid;
+                                        border-color: transparent transparent transparent $color-theme;
+                                    }
+                                }
                             }
                         }
                     }
@@ -939,6 +1015,7 @@ body {
                 background-color: $color-white;
 
                 input[type=text] {
+                    border-radius: $border-radius-medium;
                     height: 100%;
                     border: none;
                     font-size: 0.875rem;
@@ -1052,6 +1129,7 @@ body {
                 font-size: 1.125rem;
                 font-weight: $font-weight-medium;
                 width: 100%;
+
                 &:focus {
                     background-color: $color-theme-dark;
                     color: $color-white;
@@ -1084,6 +1162,7 @@ body {
                 display: flex;
                 justify-content: space-between;
                 align-content: center;
+
                 h3 {
                     font-size: 1rem;
                     font-weight: $font-weight-medium;
@@ -1151,7 +1230,7 @@ body {
                 }
             }
 
-            > input {
+            >input {
                 border-radius: calc($border-radius-small / 2);
                 height: 2.5rem;
                 width: 100%;
@@ -1173,6 +1252,7 @@ body {
                 font-size: 1.125rem;
                 font-weight: $font-weight-medium;
                 width: 100%;
+
                 &:focus {
                     background-color: $color-theme-dark;
                     color: $color-white;
@@ -1412,7 +1492,7 @@ footer {
             }
         }
     }
-    
+
 
     .login-register {
         .container {

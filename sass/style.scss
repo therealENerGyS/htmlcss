@@ -1,6 +1,7 @@
-//Google Fonts
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
+/* Varibales */
 $color-gray-0: #AAAAAA;
 $color-gray-1: #CCCCCC;
 $color-gray-2: #E3E3E3;
@@ -36,10 +37,12 @@ body {
     color: $color-theme-dark;
 }
 
+/* Remove padding from all containers*/
 .container {
     padding: 0;
 }
 
+/* General button theme */
 .btn-theme {
     background-color: $color-theme;
     color: $color-white;
@@ -52,12 +55,14 @@ body {
         background-color: $color-theme-dark;
         color: $color-white;
     }
+
     &:focus {
         background-color: $color-theme-dark;
         color: $color-white;
     }
 }
 
+/* General white button theme */
 .white-btn {
     color: $color-theme;
     background-color: $color-white;
@@ -72,13 +77,14 @@ body {
         background-color: $color-theme;
         color: $color-white;
     }
+
     &:focus {
         background-color: $color-theme;
         color: $color-white;
-        outline:2px solid black;
     }
 }
 
+/* General style for text sections between content */
 .text-section {
     color: $color-theme-dark;
     text-align: center;
@@ -92,6 +98,7 @@ body {
             color: $color-theme;
         }
     }
+
     img {
         user-select: none;
     }
@@ -101,6 +108,7 @@ body {
     }
 }
 
+/* General grid layout start */
 .products-grid {
     padding: 1rem 0 8rem 0;
     display: flex;
@@ -155,11 +163,14 @@ body {
                     color: $color-gray-0;
                     display: inline-block;
                     position: relative;
+
                     .tooltiptext {
-                        display:none;
+                        display: none;
                     }
+
                     &:hover {
                         color: $color-theme;
+
                         .tooltiptext {
                             display: block;
                             width: 125px;
@@ -170,10 +181,11 @@ body {
                             font-size: 0.875rem;
                             padding: 0.313rem 0;
                             margin: 0 1rem;
-                    
+
                             position: absolute;
                             right: 95%;
                             z-index: 1;
+
                             &::after {
                                 content: " ";
                                 position: absolute;
@@ -258,16 +270,19 @@ body {
         display: none;
     }
 }
+/* General grid layout end */
 
+/* in stock color */
 .instock {
     color: $color-instock;
 }
 
+/* out of stock color */
 .outofstock {
     color: $color-outofstock;
 }
 
-/* Top menu */
+/* Blue header start */
 .top-header {
     background-color: $color-theme;
     color: $color-white;
@@ -283,7 +298,6 @@ body {
         }
     }
 
-    /* Top blue menu */
     >.container {
         height: 100%;
         display: flex;
@@ -329,8 +343,7 @@ body {
                 }
             }
         }
-
-        /* Top right links and socials */
+        /* Top right links and socials start*/
         .menu-links {
 
             user-select: none;
@@ -346,10 +359,12 @@ body {
                 }
             }
         }
+        /* Top right links and socials end */
     }
 }
+/* Blue header end */
 
-/* Main (Middle) Header */
+/* Main header start */
 .main-header {
     background-color: $color-white;
     color: $color-theme-dark;
@@ -398,6 +413,7 @@ body {
             }
         }
 
+        /* Shopping links start (My account, favorite, compare, cart) */
         .shopping-links {
             user-select: none;
             flex: 3;
@@ -421,10 +437,34 @@ body {
                 &:last-child {
                     margin: 0 0 0 0.4rem;
                 }
+                i {
+                    position: relative;
+                    div {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 12px;
+                        width: 17px;
+                        height: 17px;
+                        background-color: $color-theme;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        span {
+                            font-family: $font-roboto;
+                            font-weight: $font-weight-regular;
+                            font-size: 0.75rem;
+                            background-color: $color-theme;
+                            color: $color-white;
+                            z-index: 1;
+                        }
+                    }
+                }
             }
         }
+        /* Shopping links end */
     }
-
+    /* Browse categories + special offer button start (Navbar) */
     nav {
         border-top: 1px solid $color-gray-2;
 
@@ -452,6 +492,7 @@ body {
                             background-color: $color-theme-dark;
                             color: $color-white;
                         }
+
                         &:focus {
                             background-color: $color-theme-dark;
                             color: $color-white;
@@ -494,8 +535,11 @@ body {
             }
         }
     }
+    /* Browse categories + special offer button end (Navbar)*/
 }
+/* Main header end */
 
+/* Shopping is more fun banner start */
 .shopping-banner {
     background-color: $color-gray-3;
 
@@ -524,7 +568,9 @@ body {
         }
     }
 }
+/* Shopping is more fun banner end */
 
+/* Shopping benefits content start */
 .shopping-benefits {
     .container {
         display: flex;
@@ -567,7 +613,9 @@ body {
         }
     }
 }
+/* Shopping benefits content end */
 
+/* Category grid start */
 .shop-by-category {
     .container {
         .grid {
@@ -636,11 +684,15 @@ body {
         }
     }
 }
+/* Category grid end */
 
+/* New arrivals flex start */
 .new-arrivals {
     padding-top: 4rem;
 }
+/* New arrivals flex end */
 
+/* Discount content start */
 .discount-banner {
     background-color: $color-gray-1;
 
@@ -662,7 +714,7 @@ body {
 
             h1 {
                 font-family: $font-play;
-                font-size: 3.75;
+                font-size: 3.75rem;
                 font-weight: $font-weight-bold;
 
                 span {
@@ -688,6 +740,7 @@ body {
                     background-color: $color-white;
                     color: $color-theme;
                 }
+
                 &:focus {
                     background-color: $color-white;
                     color: $color-theme;
@@ -702,13 +755,17 @@ body {
         }
     }
 }
+/* Discount content end */
 
+/* Featured products flex start */
 .feature {
     .container {
         padding: 6rem 0 1rem 0rem;
     }
 }
+/* Featured products flex end */
 
+/* Flash sale banner start */
 .sale {
     background-color: $color-theme-dark;
 
@@ -730,7 +787,7 @@ body {
 
             h1 {
                 margin: 0;
-                font-size: 3.75;
+                font-size: 3.75rem;
                 font-weight: $font-weight-bold;
                 font-family: $font-play;
             }
@@ -742,6 +799,7 @@ body {
             }
         }
 
+        /* Countdown timer start */
         .countdown {
             width: 60%;
             color: $color-theme;
@@ -780,6 +838,7 @@ body {
                 }
             }
         }
+        /* Countdown timer end */
 
         button {
             border-radius: 40px;
@@ -788,7 +847,9 @@ body {
         }
     }
 }
+/* Flash sale banner end */
 
+/* Top Sellers grid start */
 .top-sell {
     .container {
         padding: 6rem 0;
@@ -850,11 +911,14 @@ body {
                             color: $color-gray-0;
                             display: inline-block;
                             position: relative;
+
                             .tooltiptext {
-                                display:none;
+                                display: none;
                             }
+
                             &:hover {
                                 color: $color-theme;
+
                                 .tooltiptext {
                                     display: block;
                                     width: 125px;
@@ -865,10 +929,11 @@ body {
                                     font-size: 0.875rem;
                                     padding: 0.313rem 0;
                                     margin: 0 1rem;
-                            
+
                                     position: absolute;
                                     right: 95%;
                                     z-index: 1;
+
                                     &::after {
                                         content: " ";
                                         position: absolute;
@@ -974,7 +1039,9 @@ body {
         }
     }
 }
+/* Top Sellers grid end */
 
+/* Subscribe banner start */
 .subscribe {
     background-color: $color-gray-4;
     height: 19rem;
@@ -1045,9 +1112,9 @@ body {
         }
     }
 }
+/* Subscribe banner end */
 
-/* Account Page */
-
+/* Account Page - greybar start */
 .site-bar {
     background-color: $color-theme-dark-light;
     color: $color-theme;
@@ -1082,8 +1149,9 @@ body {
         }
     }
 }
+/* Account Page - greybar end */
 
-/* Login + Register form */
+/* Login + Register form start */
 .login-register {
     padding: 6rem 0;
 
@@ -1261,7 +1329,9 @@ body {
         }
     }
 }
+/* Login + Register form end */
 
+/* Footer start */
 footer {
     background-color: #080C24;
     color: $color-white;
@@ -1276,8 +1346,9 @@ footer {
         }
     }
 }
+/* Footer end */
 
-/* Screens Greater than mobile */
+/* Screens Greater than mobile start */
 @media (min-width: 768px) {
     .products-grid {
         justify-content: space-between;
@@ -1366,8 +1437,9 @@ footer {
         }
     }
 }
+/* Screens Greater than mobile end */
 
-/* Screens Greater than tablet */
+/* Screens Greater than tablet start */
 @media (min-width: 992px) {
     .products-grid {
         .product-box {
@@ -1500,7 +1572,9 @@ footer {
         }
     }
 }
+/* Screens Greater than tablet end */
 
+/* Fix for 3-products flexbox when shrinking screen */
 @media (min-width: 1200px) {
     .products-grid {
         .product-box {
@@ -1509,6 +1583,7 @@ footer {
     }
 }
 
+/* Fix for 3-products flexbox when shrinking screen */
 @media (min-width: 1400px) {
     .products-grid {
         .product-box {

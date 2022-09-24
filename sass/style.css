@@ -1,4 +1,6 @@
+/* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+/* Varibales */
 /* General */
 html,
 body {
@@ -10,10 +12,12 @@ body {
   color: #0E153D;
 }
 
+/* Remove padding from all containers*/
 .container {
   padding: 0;
 }
 
+/* General button theme */
 .btn-theme {
   background-color: #20D3C2;
   color: #FFFFFF;
@@ -31,6 +35,7 @@ body {
   color: #FFFFFF;
 }
 
+/* General white button theme */
 .white-btn {
   color: #20D3C2;
   background-color: #FFFFFF;
@@ -48,9 +53,9 @@ body {
 .white-btn:focus {
   background-color: #20D3C2;
   color: #FFFFFF;
-  outline: 2px solid black;
 }
 
+/* General style for text sections between content */
 .text-section {
   color: #0E153D;
   text-align: center;
@@ -73,6 +78,7 @@ body {
   padding: 1rem 0;
 }
 
+/* General grid layout start */
 .products-grid {
   padding: 1rem 0 8rem 0;
   display: flex;
@@ -210,20 +216,22 @@ body {
   display: none;
 }
 
+/* General grid layout end */
+/* in stock color */
 .instock {
   color: #82D8C6;
 }
 
+/* out of stock color */
 .outofstock {
   color: #FE6C6C;
 }
 
-/* Top menu */
+/* Blue header start */
 .top-header {
   background-color: #20D3C2;
   color: #FFFFFF;
   height: 3rem;
-  /* Top blue menu */
 }
 .top-header a {
   color: #FFFFFF;
@@ -239,7 +247,8 @@ body {
   justify-content: flex-end;
   align-items: center;
   /* Languange and Currency Settings */
-  /* Top right links and socials */
+  /* Top right links and socials start*/
+  /* Top right links and socials end */
 }
 .top-header > .container .localization {
   display: flex;
@@ -286,10 +295,13 @@ body {
   margin: 0.3rem;
 }
 
-/* Main (Middle) Header */
+/* Blue header end */
+/* Main header start */
 .main-header {
   background-color: #FFFFFF;
   color: #0E153D;
+  /* Browse categories + special offer button start (Navbar) */
+  /* Browse categories + special offer button end (Navbar)*/
 }
 .main-header > .container {
   display: flex;
@@ -297,6 +309,8 @@ body {
   align-items: center;
   padding-top: 2.2rem;
   padding-bottom: 2.2rem;
+  /* Shopping links start (My account, favorite, compare, cart) */
+  /* Shopping links end */
 }
 .main-header > .container .logo {
   -webkit-user-select: none;
@@ -361,6 +375,29 @@ body {
 .main-header > .container .shopping-links a:last-child {
   margin: 0 0 0 0.4rem;
 }
+.main-header > .container .shopping-links a i {
+  position: relative;
+}
+.main-header > .container .shopping-links a i div {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  width: 17px;
+  height: 17px;
+  background-color: #20D3C2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-header > .container .shopping-links a i div span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  background-color: #20D3C2;
+  color: #FFFFFF;
+  z-index: 1;
+}
 .main-header nav {
   border-top: 1px solid #E3E3E3;
 }
@@ -422,6 +459,8 @@ body {
   align-items: center;
 }
 
+/* Main header end */
+/* Shopping is more fun banner start */
 .shopping-banner {
   background-color: #EEEEEE;
 }
@@ -446,6 +485,8 @@ body {
   display: none;
 }
 
+/* Shopping is more fun banner end */
+/* Shopping benefits content start */
 .shopping-benefits .container {
   display: flex;
   max-width: 500px;
@@ -484,6 +525,8 @@ body {
   font-size: 1rem;
 }
 
+/* Shopping benefits content end */
+/* Category grid start */
 .shop-by-category .container .grid {
   display: grid;
   padding-top: 1rem;
@@ -538,10 +581,14 @@ body {
   grid-column: span 2;
 }
 
+/* Category grid end */
+/* New arrivals flex start */
 .new-arrivals {
   padding-top: 4rem;
 }
 
+/* New arrivals flex end */
+/* Discount content start */
 .discount-banner {
   background-color: #CCCCCC;
 }
@@ -563,7 +610,7 @@ body {
 }
 .discount-banner .container .discount h1 {
   font-family: "Play", sans-serif;
-  font-size: 3.75;
+  font-size: 3.75rem;
   font-weight: 700;
 }
 .discount-banner .container .discount h1 span {
@@ -596,10 +643,14 @@ body {
   font-size: 0.875rem;
 }
 
+/* Discount content end */
+/* Featured products flex start */
 .feature .container {
   padding: 6rem 0 1rem 0rem;
 }
 
+/* Featured products flex end */
+/* Flash sale banner start */
 .sale {
   background-color: #0E153D;
 }
@@ -608,6 +659,8 @@ body {
   height: 27.1875rem;
   display: flex;
   justify-content: space-between;
+  /* Countdown timer start */
+  /* Countdown timer end */
 }
 .sale .container .flash-sale {
   display: flex;
@@ -621,7 +674,7 @@ body {
 }
 .sale .container .flash-sale h1 {
   margin: 0;
-  font-size: 3.75;
+  font-size: 3.75rem;
   font-weight: 700;
   font-family: "Play", sans-serif;
 }
@@ -670,6 +723,8 @@ body {
   margin: 0.938rem 0px;
 }
 
+/* Flash sale banner end */
+/* Top Sellers grid start */
 .top-sell .container {
   padding: 6rem 0;
 }
@@ -826,6 +881,8 @@ body {
   grid-row: span 2;
 }
 
+/* Top Sellers grid end */
+/* Subscribe banner start */
 .subscribe {
   background-color: #F6F6F6;
   height: 19rem;
@@ -888,7 +945,8 @@ body {
   background-color: #CCCCCC;
 }
 
-/* Account Page */
+/* Subscribe banner end */
+/* Account Page - greybar start */
 .site-bar {
   background-color: #50546E;
   color: #20D3C2;
@@ -921,7 +979,8 @@ body {
   color: #FFFFFF;
 }
 
-/* Login + Register form */
+/* Account Page - greybar end */
+/* Login + Register form start */
 .login-register {
   padding: 6rem 0;
 }
@@ -1084,6 +1143,8 @@ body {
   color: #FFFFFF;
 }
 
+/* Login + Register form end */
+/* Footer start */
 footer {
   background-color: #080C24;
   color: #FFFFFF;
@@ -1096,7 +1157,8 @@ footer .container .copyright {
   font-size: 0.875rem;
 }
 
-/* Screens Greater than mobile */
+/* Footer end */
+/* Screens Greater than mobile start */
 @media (min-width: 768px) {
   .products-grid {
     justify-content: space-between;
@@ -1145,7 +1207,8 @@ footer .container .copyright {
     width: 45%;
   }
 }
-/* Screens Greater than tablet */
+/* Screens Greater than mobile end */
+/* Screens Greater than tablet start */
 @media (min-width: 992px) {
   .products-grid .product-box {
     width: 19rem;
@@ -1212,11 +1275,14 @@ footer .container .copyright {
     flex-direction: row;
   }
 }
+/* Screens Greater than tablet end */
+/* Fix for 3-products flexbox when shrinking screen */
 @media (min-width: 1200px) {
   .products-grid .product-box {
     width: 23rem;
   }
 }
+/* Fix for 3-products flexbox when shrinking screen */
 @media (min-width: 1400px) {
   .products-grid .product-box {
     width: 26rem;

@@ -40,16 +40,21 @@
                 </div>
                 <div class="menu-links">
                     <span class="links">
-                        <a href="">Newsletter</a>
-                        <a href="">Contact us</a>
-                        <a href="">FAQs</a>
+                        <a href="" title="Check out our newsletter">Newsletter</a>
+                        <a href="" title="Contact us here">Contact us</a>
+                        <a href="" title="Frequently asked questions">FAQs</a>
                     </span>
                     <span class="socials">
-                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest-p"></i></a>
-                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/" title="Opens up Facebook homepage"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/" title="Opens up Twitter homepage"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" title="Opens up Instagram homepage"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.pinterest.com/" title="Opens up Pinterest homepage"><i
+                                class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="https://www.youtube.com/" title="Opens up Youtube homepage"><i
+                                class="fa-brands fa-youtube"></i></a>
                     </span>
                 </div>
             </div>
@@ -57,7 +62,7 @@
         <div class="main-header">
             <div class="container">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.html" title="Go to the homepage">
                         <img src="Images/Logo.svg" alt="Kenkata Webshop">
                     </a>
                 </div>
@@ -100,7 +105,7 @@
     <div class="site-bar">
         <div class="container">
             <h1>My Account<h1>
-                    <h2><a href="index.html">Home </a><span>/ My Account</span></h2>
+                    <h2><a href="index.html" title="Go to the homepage">Home </a><span>/ My Account</span></h2>
         </div>
     </div>
     <section class="login-register">
@@ -108,13 +113,15 @@
             <div class="login">
                 <h1 class="login-text">LOGIN</h1>
                 <h2 class="login-email">Email address <span>*</span></h2>
-                <input type="text" required>
+                <input type="text" id="login-email" required>
+                <label for="login-email">Please input a valid email address</label>
                 <h2 class="login-password">Password <span>*</span></h2>
-                <input type="password" required>
+                <input type="password" id="login-password" required>
+                <label for="login-password">Incorrect password</label>
                 <button class="btn btn-theme">LOG IN</button>
                 <div class="remember-forgot">
                     <label><input type="checkbox" name="checkbox" value="value">Remember me</label>
-                    <a href="#">Lost your password?</a>
+                    <a href="#" title="Recover your password">Lost your password?</a>
                 </div>
                 <div class="login-alternative">
                     <img src="Images/line.svg">
@@ -137,14 +144,18 @@
                 <p class="register-p">Registering for this site allows you to access your order status and history. Just
                     fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask
                     you for information necessary to make the purchase process faster and easier.</p>
-                <h2 class="register-fname">Firstname <span>*</span></h2>
+                <h2 id="register-fname">First name <span>*</span></h2>
                 <input type="text" required>
-                <h2 class="register-lname">Lastname <span>*</span></h2>
+                <label for="register-fname">Please input your first name</label>
+                <h2 id="register-lname">Last name <span>*</span></h2>
                 <input type="text" required>
-                <h2 class="register-email">Email address <span>*</span></h2>
+                <label for="register-lname">Please input your last name</label>
+                <h2 id="register-email">Email address <span>*</span></h2>
                 <input type="text" required>
-                <h2 class="reigster-password">Password <span>*</span></h2>
+                <label for="register-email">Please input a valid email address</label>
+                <h2 id="reigster-password">Password <span>*</span></h2>
                 <input type="password" required>
+                <label for="register-lname">Password must contain at least 8 or more characters</label>
                 <p class="register-data-p">Your personal data will be used to support your experience throughout this
                     website, to manage access to your account, and for other purposes described in our <span>privacy
                         policy.</span></p>

@@ -1183,12 +1183,16 @@ body {
                 }
             }
 
-            >input {
+            > input {
                 height: 2.5rem;
                 width: 100%;
                 border: none;
                 text-indent: 1rem;
                 border-radius: calc($border-radius-small / 2);
+            }
+            > label {
+                color: #CC0033;
+                font-size: 0.875rem;
             }
 
             button {
@@ -1304,6 +1308,10 @@ body {
                 width: 100%;
                 border: none;
                 text-indent: 1rem;
+            }
+            > label {
+                color: #CC0033;
+                font-size: 0.875rem;
             }
 
             .register-data-p {

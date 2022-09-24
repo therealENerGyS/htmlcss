@@ -1020,6 +1020,10 @@ body {
   text-indent: 1rem;
   border-radius: 4px;
 }
+.login-register .container .login > label {
+  color: #CC0033;
+  font-size: 0.875rem;
+}
 .login-register .container .login button {
   height: 3rem;
   margin-top: 1.5rem;
@@ -1125,6 +1129,10 @@ body {
   width: 100%;
   border: none;
   text-indent: 1rem;
+}
+.login-register .container .register > label {
+  color: #CC0033;
+  font-size: 0.875rem;
 }
 .login-register .container .register .register-data-p span {
   font-family: "Montserrat", sans-serif;

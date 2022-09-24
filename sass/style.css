@@ -306,19 +306,19 @@ body {
 .main-header > .container {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding-top: 2.2rem;
-  padding-bottom: 2.2rem;
+  padding: 0.5rem 0;
   /* Shopping links start (My account, favorite, compare, cart) */
   /* Shopping links end */
 }
 .main-header > .container .logo {
+  padding: 1rem 0;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   flex: 2;
-  display: none;
 }
 .main-header > .container .search {
   -webkit-user-select: none;
@@ -380,8 +380,8 @@ body {
 }
 .main-header > .container .shopping-links a i div {
   position: absolute;
-  bottom: 10px;
-  left: 12px;
+  bottom: 50%;
+  left: 50%;
   width: 17px;
   height: 17px;
   background-color: #20D3C2;
@@ -470,9 +470,16 @@ body {
   align-items: center;
 }
 .shopping-banner .container .shopping-text {
-  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 .shopping-banner .container .shopping-text .shopping-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-size: 3.75rem;
   font-family: "Play", sans-serif;
   padding-bottom: 0.938rem;
@@ -752,7 +759,7 @@ body {
   top: 5%;
 }
 .top-sell .container .grid-top-sellers .product-box:hover .product-body {
-  height: 25%;
+  height: 18%;
 }
 .top-sell .container .grid-top-sellers .product-box:hover .product-background {
   height: 100%;
@@ -867,7 +874,6 @@ body {
   height: 50%;
 }
 .top-sell .container .grid-top-sellers .box-1 {
-  display: none;
   grid-column: span 2;
   grid-row: span 4;
 }
@@ -877,6 +883,7 @@ body {
   grid-row: span 2;
 }
 .top-sell .container .grid-top-sellers .box-3 {
+  display: none;
   grid-column: span 2;
   grid-row: span 2;
 }
@@ -988,18 +995,20 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  height: auto;
   gap: 1.5rem;
 }
 .login-register .container .login {
   background-color: #F6F6F6;
   border-radius: 8px;
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  height: 100%;
   padding: 1.5rem;
 }
 .login-register .container .login h1 {
@@ -1102,9 +1111,10 @@ body {
   background-color: #F6F6F6;
   border-radius: 8px;
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  height: 100%;
   padding: 1.5rem;
 }
 .login-register .container .register .register-p {
@@ -1186,8 +1196,13 @@ footer .container .copyright {
   .top-header .container .menu-links {
     display: block;
   }
-  .main-header .container .search {
+  .main-header > .container {
+    padding: 2.2rem 0;
     display: flex;
+    flex-direction: row;
+  }
+  .main-header > .container .logo {
+    padding: 0;
   }
   .discount-banner .container .discount {
     width: 30%;
@@ -1202,11 +1217,11 @@ footer .container .copyright {
     width: 90px;
     height: 90px;
   }
-  .top-sell .container .grid-top-sellers .box-1 {
+  .top-sell .container .grid-top-sellers .box-2 {
     display: none;
   }
-  .top-sell .container .grid-top-sellers .box-2 {
-    display: block;
+  .top-sell .container .grid-top-sellers .box-3 {
+    display: none;
   }
   .subscribe .container .subscribe-text {
     width: 50%;
@@ -1230,11 +1245,14 @@ footer .container .copyright {
   .top-header .container .menu-links .links {
     display: inline;
   }
-  .main-header .container .logo {
-    display: inline;
+  .main-header .container .search {
+    display: flex;
   }
   .main-header .container .shopping-links a:first-child {
     margin: 0 2rem 0 0;
+  }
+  .shopping-banner .container .shopping-text {
+    width: 30%;
   }
   .shopping-banner .container img {
     display: inline;
@@ -1267,10 +1285,13 @@ footer .container .copyright {
   .top-sell .container .grid-top-sellers {
     display: grid;
   }
-  .top-sell .container .grid-top-sellers .box-1 {
-    display: block;
+  .top-sell .container .grid-top-sellers .product-box:hover .product-body {
+    height: 25%;
   }
   .top-sell .container .grid-top-sellers .box-2 {
+    display: block;
+  }
+  .top-sell .container .grid-top-sellers .box-3 {
     display: block;
   }
   .subscribe .container .subscribe-text {

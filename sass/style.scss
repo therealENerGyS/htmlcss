@@ -372,14 +372,14 @@ body {
     >.container {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        padding-top: 2.2rem;
-        padding-bottom: 2.2rem;
+        padding: 0.5rem 0;
 
         .logo {
+            padding: 1rem 0;
             user-select: none;
             flex: 2;
-            display: none;
         }
 
         .search {
@@ -441,8 +441,8 @@ body {
                     position: relative;
                     div {
                         position: absolute;
-                        bottom: 10px;
-                        left: 12px;
+                        bottom: 50%;
+                        left: 50%;
                         width: 17px;
                         height: 17px;
                         background-color: $color-theme;
@@ -549,9 +549,16 @@ body {
         align-items: center;
 
         .shopping-text {
-            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
 
             .shopping-header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 font-size: 3.75rem;
                 font-family: $font-play;
                 padding-bottom: 0.938rem;
@@ -881,7 +888,7 @@ body {
                     }
 
                     .product-body {
-                        height: 25%;
+                        height: 18%;
                     }
 
                     .product-background {
@@ -1021,7 +1028,6 @@ body {
             }
 
             .box-1 {
-                display: none;
                 grid-column: span 2;
                 grid-row: span 4;
             }
@@ -1033,6 +1039,7 @@ body {
             }
 
             .box-3 {
+                display: none;
                 grid-column: span 2;
                 grid-row: span 2;
             }
@@ -1159,14 +1166,17 @@ body {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        height: fit-content;
+        max-height: fit-content;
+        height: auto;
         gap: 1.5rem;
 
         .login {
             background-color: $color-gray-4;
             border-radius: $border-radius-small;
             width: 100%;
-            height: fit-content;
+            max-height: fit-content;
+            height: 100%;
+
             padding: 1.5rem;
 
             h1 {
@@ -1279,7 +1289,8 @@ body {
             background-color: $color-gray-4;
             border-radius: $border-radius-small;
             width: 100%;
-            height: fit-content;
+            max-height: fit-content;
+            height: 100%;
             padding: 1.5rem;
 
             .register-p {
@@ -1383,11 +1394,13 @@ footer {
             }
         }
     }
-
     .main-header {
-        .container {
-            .search {
-                display: flex;
+        >.container {
+            padding: 2.2rem 0;
+            display: flex;
+            flex-direction: row;
+            .logo {
+                padding: 0;
             }
         }
     }
@@ -1422,12 +1435,11 @@ footer {
     .top-sell {
         .container {
             .grid-top-sellers {
-                .box-1 {
+                .box-2 {
                     display: none;
                 }
-
-                .box-2 {
-                    display: block;
+                .box-3 {
+                    display: none;
                 }
             }
         }
@@ -1475,10 +1487,10 @@ footer {
 
     .main-header {
         .container {
-            .logo {
-                display: inline;
+            
+            .search {
+                display: flex;
             }
-
             .shopping-links {
                 a {
                     &:first-child {
@@ -1488,9 +1500,11 @@ footer {
             }
         }
     }
-
     .shopping-banner {
         .container {
+            .shopping-text {
+                width: 30%;
+            }
             img {
                 display: inline;
             }
@@ -1549,12 +1563,17 @@ footer {
         .container {
             .grid-top-sellers {
                 display: grid;
-
-                .box-1 {
+                .product-box {
+                    &:hover {
+                        .product-body {
+                            height: 25%;
+                        }
+                    }
+                }
+                .box-2 {
                     display: block;
                 }
-
-                .box-2 {
+                .box-3 {
                     display: block;
                 }
             }

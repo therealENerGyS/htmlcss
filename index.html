@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"
-        defer>
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href="sass/style.css" rel="stylesheet">
     <title>Kenkata</title>
 </head>
@@ -73,10 +72,14 @@
                             class="fa-regular fa-magnifying-glass"></i></button>
                 </div>
                 <div class="shopping-links">
-                    <a href="myaccount.html" title="Go to my account"><i class="fa-regular fa-user me-1"></i>My Account</a>
+                    <a href="myaccount.html" title="Go to my account"><i class="fa-regular fa-user me-1"></i>My
+                        Account</a>
                     <a href="#" title="Check your favorite products"><i class="fa-regular fa-heart me-1"></i></a>
-                    <a href="#" title="Compare your products"><i class="fa-regular fa-shuffle me-1"><div><span>0</span></div></i></a>
-                    <a href="#" title="Add to Cart"><i class="fa-regular fa-cart-shopping me-1"><div><span>0</span></div></i>
+                    <a href="#" title="Compare your products"><i class="fa-regular fa-shuffle me-1"></i>
+                        <div><span>0</span></div>
+                    </a>
+                    <a href="#" title="Add to Cart"><i class="fa-regular fa-cart-shopping me-1"></i>
+                        <div class="cart-number"><span>0</span></div>
                         <span id="cart-total">€99999.00</span>
                     </a>
                 </div>
@@ -98,7 +101,7 @@
                         </div>
                     </div>
                     <div class="special-offer">
-                        <button class="btn btn-theme" type="button" title="Check out special offers">SPECIAL
+                        <button class="btn-theme" type="button" title="Check out special offers">SPECIAL
                             OFFER</button>
                     </div>
                 </div>
@@ -113,42 +116,42 @@
                 </h1>
                 <p class="shopping-p">Vivamus dignissim a ex eu ornare. Ut fermentum orci vel diam ultricies faucibus.
                     Quisque quis erat sed</p>
-                <button class="btn white-btn" type="button" title="Shop now">SHOP NOW</button>
+                <button class="btn-white" type="button" title="Shop now">SHOP NOW</button>
             </div>
-            <img src="Images/Thumbs/shopping-thumb.svg">
+            <img src="Images/Thumbs/shopping-thumb.svg" alt="Shopping Banner">
         </div>
     </div>
     <div class="shopping-benefits">
         <div class="container">
             <div class="benefits">
-                <img src="Images/Icons/Box.svg">
+                <img src="Images/Icons/Box.svg" alt="Box">
                 <div class="free-shipping-text">
                     <div>
-                        <h1>Free shipping</h1>
+                        <h1 class="benefit-h1">Free shipping</h1>
                         <p>For a local customer, we provide free shipping facility</p>
                     </div>
                 </div>
             </div>
             <div class="benefits">
-                <img src="Images/Icons/247.svg">
+                <img src="Images/Icons/247.svg" alt="Clock">
                 <div class="text-247">
                     <div>
-                        <h1>24/7 support</h1>
+                        <h1 class="benefit-h1">24/7 support</h1>
                         <p>For any inquiry, we are available 24 hours every day</p>
                     </div>
                 </div>
             </div>
             <div class="benefits">
-                <img src="Images/Icons/Online-payment.svg">
+                <img src="Images/Icons/Online-payment.svg" alt="Phone">
                 <div>
-                    <h1>Online payment</h1>
+                    <h1 class="benefit-h1">Online payment</h1>
                     <p>You can pay quickly and easily with our online payment system</p>
                 </div>
             </div>
             <div class="benefits">
-                <img src="Images/Icons/Fast-delivery.svg">
+                <img src="Images/Icons/Fast-delivery.svg" alt="Clock and Box">
                 <div>
-                    <h1>Fast delivery</h1>
+                    <h1 class="benefit-h1">Fast delivery</h1>
                     <p>We understand your urgency and we deliver in a fast way</p>
                 </div>
             </div>
@@ -157,58 +160,58 @@
     <section class="shop-by-category">
         <div class="container">
             <div class="text-section">
-                <h1>SHOP BY <span>CATEGORY</span></h1>
-                <img src="Images/squiggly.svg" title="Wavy gray line">
+                <h2 class="dark-h2">SHOP BY <span>CATEGORY</span></h2>
+                <img src="Images/squiggly.svg" alt="Wavy gray line">
                 <p>We always try to give you the best product within a fast and reliable way</p>
             </div>
 
             <div class="grid">
-                <div id="category-box-1" class="category-box">
-                    <img src="Images/Photos/pexels-helena-lopes-1049317.jpg" width="300" height="249">
+                <div class="category-box">
+                    <img src="Images/Photos/pexels-helena-lopes-1049317.jpg" alt="Picture of three men" width="300" height="249">
                     <div class="category-box-title grid-title">
-                        <h1>Men</h1>
+                        <h2 class="grid-title">Men</h2>
                         <p>82 products</p>
                     </div>
                 </div>
-                <div id="category-box-2" class="category-box">
-                    <img src="Images/Photos/pexels-adrienn-1524105.jpg" width="508" height="350">
+                <div class="category-box c-2">
+                    <img src="Images/Photos/pexels-adrienn-1524105.jpg" alt="Picture of three women" width="508" height="350">
                     <div class="category-box-title grid-title">
-                        <h1>Women</h1>
+                        <h2 class="grid-title">Women</h2>
                         <p>91 products</p>
                     </div>
                 </div>
-                <div id="category-box-3" class="category-box">
-                    <img src="Images/Photos/pexels-lukas-296308.jpg" width="550" height="508">
+                <div class="category-box cr-2">
+                    <img src="Images/Photos/pexels-lukas-296308.jpg" alt="Kids in a jumping castle" width="550" height="508">
                     <div class="category-box-title grid-title">
-                        <h1>Kids</h1>
+                        <h2 class="grid-title">Kids</h2>
                         <p>71 products</p>
                     </div>
                 </div>
-                <div id="category-box-4" class="category-box">
-                    <img src="Images/Photos/pexels-ingo-joseph-609771.jpg" width="508" height="508">
+                <div class="category-box cr-2">
+                    <img src="Images/Photos/pexels-ingo-joseph-609771.jpg" alt="Picture of shoes" width="508" height="508">
                     <div class="category-box-title grid-title">
-                        <h1>Shoes</h1>
+                        <h2 class="grid-title">Shoes</h2>
                         <p>54 products</p>
                     </div>
                 </div>
-                <div id="category-box-5" class="category-box">
-                    <img src="Images/Photos/pexels-pixabay-35185.jpg" width="249" height="249">
+                <div class="category-box">
+                    <img src="Images/Photos/pexels-pixabay-35185.jpg" alt="Picture of hats on hatstand" width="249" height="249">
                     <div class="category-box-title grid-title">
-                        <h1>Hats</h1>
+                        <h2 class="grid-title">Hats</h2>
                         <p>28 products</p>
                     </div>
                 </div>
-                <div id="category-box-6" class="category-box">
-                    <img src="Images/Photos/pexels-francesco-paggiaro-704241.jpg" width="508" height="249">
+                <div class="category-box c-2">
+                    <img src="Images/Photos/pexels-francesco-paggiaro-704241.jpg" alt="Sunglasses organized" width="508" height="249">
                     <div class="category-box-title grid-title">
-                        <h1>Sunglasses</h1>
+                        <h2 class="grid-title">Sunglasses</h2>
                         <p>24 products</p>
                     </div>
                 </div>
-                <div id="category-box-7" class="category-box">
-                    <img src="Images/Photos/pexels-mister-mister-380782.jpg" width="249" height="249">
+                <div class="category-box">
+                    <img src="Images/Photos/pexels-mister-mister-380782.jpg" alt="Watches in a box" width="249" height="249">
                     <div class="category-box-title grid-title">
-                        <h1>Watches</h1>
+                        <h2 class="grid-title">Watches</h2>
                         <p>12 products</p>
                     </div>
                 </div>
@@ -218,22 +221,26 @@
     <section class="new-arrivals">
         <div class="container">
             <div class="text-section">
-                <h1>NEW <span>ARRIVALS</span></h1>
-                <img src="Images/squiggly.svg" title="Wavy gray line">
+                <h2 class="dark-h2">NEW <span>ARRIVALS</span></h2>
+                <img src="Images/squiggly.svg" alt="Wavy gray line">
                 <p>Check out our latest products from top fashion designers</p>
             </div>
             <div class="products-grid">
                 <div class="product-box">
-                    <img src="Images/Thumbs/blue-silk.svg">
+                    <img src="Images/Thumbs/blue-silk.svg" alt="Placeholder image">
                     <ul class="product-menu">
                         <li><i class="fa-solid fa-circle instock"></i></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i class="fa-regular fa-heart"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i class="fa-regular fa-shuffle"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i class="fa-regular fa-magnifying-glass"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i class="fa-regular fa-cart-shopping"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i
+                                    class="fa-regular fa-heart"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i
+                                    class="fa-regular fa-shuffle"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i
+                                    class="fa-regular fa-magnifying-glass"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i
+                                    class="fa-regular fa-cart-shopping"></i></a></li>
                     </ul>
                     <div class="product-body">
-                        <h1 class="product-title">Blue silk flare sleeved top</h1>
+                        <h2 class="product-title">Blue silk flare sleeved top</h2>
                         <button type="button" disabled>Fashion</button>
                         <p>€49.99</p>
                         <p class="product-discount-price">€19.99</p>
@@ -241,16 +248,20 @@
                     <div class="product-background"></div>
                 </div>
                 <div class="product-box box-2">
-                    <img src="Images/Thumbs/new-look-men.svg">
+                    <img src="Images/Thumbs/new-look-men.svg" alt="Placeholder image">
                     <ul class="product-menu">
                         <li><i class="fa-solid fa-circle outofstock"></i></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i class="fa-regular fa-heart"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i class="fa-regular fa-shuffle"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i class="fa-regular fa-magnifying-glass"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i class="fa-regular fa-cart-shopping"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i
+                                    class="fa-regular fa-heart"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i
+                                    class="fa-regular fa-shuffle"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i
+                                    class="fa-regular fa-magnifying-glass"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i
+                                    class="fa-regular fa-cart-shopping"></i></a></li>
                     </ul>
                     <div class="product-body">
-                        <h1 class="product-title">New look men's coat</h1>
+                        <h2 class="product-title">New look men's coat</h2>
                         <button type="button" disabled>Fashion</button>
                         <p>€49.99</p>
                         <p class="product-discount-price">€19.99</p>
@@ -258,16 +269,20 @@
                     <div class="product-background"></div>
                 </div>
                 <div class="product-box box-3">
-                    <img src="Images/Thumbs/circle-pattern.svg">
+                    <img src="Images/Thumbs/circle-pattern.svg" alt="Placeholder image">
                     <ul class="product-menu">
                         <li><i class="fa-solid fa-circle instock"></i></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i class="fa-regular fa-heart"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i class="fa-regular fa-shuffle"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i class="fa-regular fa-magnifying-glass"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i class="fa-regular fa-cart-shopping"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i
+                                    class="fa-regular fa-heart"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i
+                                    class="fa-regular fa-shuffle"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i
+                                    class="fa-regular fa-magnifying-glass"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i
+                                    class="fa-regular fa-cart-shopping"></i></a></li>
                     </ul>
                     <div class="product-body">
-                        <h1 class="product-title">Circle pattern girls shirt</h1>
+                        <h2 class="product-title">Circle pattern girls shirt</h2>
                         <button type="button" disabled>Fashion</button>
                         <p>€49.99</p>
                         <p class="product-discount-price">€19.99</p>
@@ -280,7 +295,7 @@
     <section class="discount-banner">
         <div class="container">
             <div class="discount">
-                <h1>30% <span>OFF</span></h1>
+                <h2 class="discount-h2">30% <span>OFF</span></h2>
                 <p>FOR NEW CUSTOMER</p>
                 <button class="shop-now" type="button">SHOP NOW</button>
             </div>
@@ -288,29 +303,33 @@
                 <p>Donec pulvinar arcu vitae ipsum varius cursus. Nunc iaculis fermentum iaculis. Nunc pulvinar purus at
                     erat lacinia, ut convallis nibh consequat. Integer nulla nisi, aliquam at tellus a, viverra
                     scelerisque purus. Nam pretium iaculis ultrices.</p>
-                <button class="btn white-btn" type="button" title="Shop now">LEARN MORE</button>
+                <button class="btn-white" type="button" title="Shop now">LEARN MORE</button>
             </div>
         </div>
     </section>
     <section class="feature">
         <div class="container">
             <div class="text-section">
-                <h1>FEATURED <span>PRODUCTS</span></h1>
-                <img src="Images/squiggly.svg" title="Wavy gray line">
+                <h2 class="dark-h2">FEATURED <span>PRODUCTS</span></h2>
+                <img src="Images/squiggly.svg" alt="Wavy gray line">
                 <p>Check out our monthly featured products from top brands</p>
             </div>
             <div class="products-grid">
                 <div class="product-box">
-                    <img src="Images/Thumbs/winter-collection.svg">
+                    <img src="Images/Thumbs/winter-collection.svg" alt="Placeholder image">
                     <ul class="product-menu">
                         <li><i class="fa-solid fa-circle instock"></i></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i class="fa-regular fa-heart"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i class="fa-regular fa-shuffle"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i class="fa-regular fa-magnifying-glass"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i class="fa-regular fa-cart-shopping"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i
+                                    class="fa-regular fa-heart"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i
+                                    class="fa-regular fa-shuffle"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i
+                                    class="fa-regular fa-magnifying-glass"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i
+                                    class="fa-regular fa-cart-shopping"></i></a></li>
                     </ul>
                     <div class="product-body">
-                        <h1 class="product-title">Winter collection for women's</h1>
+                        <h2 class="product-title">Winter collection for women's</h2>
                         <button type="button" disabled>Fashion</button>
                         <p>€49.99</p>
                         <div class="product-discount-rating">
@@ -327,16 +346,20 @@
                     <div class="product-background"></div>
                 </div>
                 <div class="product-box box-2">
-                    <img src="Images/Thumbs/new-look-men-2.svg">
+                    <img src="Images/Thumbs/new-look-men-2.svg" alt="Placeholder image">
                     <ul class="product-menu">
                         <li><i class="fa-solid fa-circle instock"></i></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i class="fa-regular fa-heart"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i class="fa-regular fa-shuffle"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i class="fa-regular fa-magnifying-glass"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i class="fa-regular fa-cart-shopping"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i
+                                    class="fa-regular fa-heart"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i
+                                    class="fa-regular fa-shuffle"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i
+                                    class="fa-regular fa-magnifying-glass"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i
+                                    class="fa-regular fa-cart-shopping"></i></a></li>
                     </ul>
                     <div class="product-body">
-                        <h1 class="product-title">New look men's coat</h1>
+                        <h2 class="product-title">New look men's coat</h2>
                         <button type="button" disabled>Fashion</button>
                         <p>€49.99</p>
                         <div class="product-discount-rating">
@@ -353,16 +376,20 @@
                     <div class="product-background"></div>
                 </div>
                 <div class="product-box box-3">
-                    <img src="Images/Thumbs/red-women-blazer.svg">
+                    <img src="Images/Thumbs/red-women-blazer.svg" alt="Placeholder image">
                     <ul class="product-menu">
                         <li><i class="fa-solid fa-circle outofstock"></i></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i class="fa-regular fa-heart"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i class="fa-regular fa-shuffle"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i class="fa-regular fa-magnifying-glass"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i class="fa-regular fa-cart-shopping"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i
+                                    class="fa-regular fa-heart"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i
+                                    class="fa-regular fa-shuffle"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i
+                                    class="fa-regular fa-magnifying-glass"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i
+                                    class="fa-regular fa-cart-shopping"></i></a></li>
                     </ul>
                     <div class="product-body">
-                        <h1 class="product-title">Red women's blazer full</h1>
+                        <h2 class="product-title">Red women's blazer full</h2>
                         <button type="button" disabled>Fashion</button>
                         <p>€49.99</p>
                         <div class="product-discount-rating">
@@ -384,52 +411,56 @@
     <section class="sale">
         <div class="container">
             <div class="flash-sale">
-                <h1>FLASH</h1>
-                <h1>SALE</h1>
-                <h2>UP TO 50% OFF</h2>
+                <h2 class="discount-h2">FLASH</h2>
+                <h2 class="discount-h2">SALE</h2>
+                <h3 class="discount-h3">UP TO 50% OFF</h3>
             </div>
             <div class="countdown">
                 <div class="date">
                     <div class="circle">
-                        <h2>7</h2>
+                        <h2 class="time-left">7</h2>
                         <p>Days</p>
                     </div>
                     <div class="circle">
-                        <h2>23</h2>
+                        <h2 class="time-left">23</h2>
                         <p>Hours</p>
                     </div>
                     <div class="circle">
-                        <h2>46</h2>
+                        <h2 class="time-left">46</h2>
                         <p>Minutes</p>
                     </div>
                     <div class="circle">
-                        <h2>12</h2>
+                        <h2 class="time-left">12</h2>
                         <p>Seconds</p>
                     </div>
                 </div>
-                <button class="btn white-btn" type="button" title="Shop now">SHOP NOW</button>
+                <button class="btn-white" type="button" title="Shop now">SHOP NOW</button>
             </div>
         </div>
     </section>
     <section class="top-sell">
         <div class="container">
             <div class="text-section">
-                <h1>TOP <span>SELLERS</span></h1>
-                <img src="Images/squiggly.svg" title="Wavy gray line">
+                <h2 class="dark-h2">TOP <span>SELLERS</span></h2>
+                <img src="Images/squiggly.svg" alt="Wavy gray line">
                 <p>Check out our weekly top sellers in all category</p>
             </div>
             <div class="grid-top-sellers">
                 <div class="product-box box-1">
-                    <img src="Images/Thumbs/men-denim-shirt.svg">
+                    <img src="Images/Thumbs/men-denim-shirt.svg" alt="Placeholder image">
                     <ul class="product-menu">
                         <li><i class="fa-solid fa-circle instock"></i></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i class="fa-regular fa-heart"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i class="fa-regular fa-shuffle"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i class="fa-regular fa-magnifying-glass"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i class="fa-regular fa-cart-shopping"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i
+                                    class="fa-regular fa-heart"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i
+                                    class="fa-regular fa-shuffle"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i
+                                    class="fa-regular fa-magnifying-glass"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i
+                                    class="fa-regular fa-cart-shopping"></i></a></li>
                     </ul>
                     <div class="product-body">
-                        <h1 class="product-title">Men's denim shirts full</h1>
+                        <h2 class="product-title">Men's denim shirts full</h2>
                         <button type="button" disabled>Fashion</button>
                         <p>€49.99</p>
                         <div class="product-discount-rating">
@@ -446,16 +477,20 @@
                     <div class="product-background"></div>
                 </div>
                 <div class="product-box small-grid box-2">
-                    <img src="Images/Thumbs/women-leather-bag-shoe.svg">
+                    <img src="Images/Thumbs/women-leather-bag-shoe.svg" alt="Placeholder image">
                     <ul class="product-menu">
                         <li><i class="fa-solid fa-circle instock"></i></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i class="fa-regular fa-heart"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i class="fa-regular fa-shuffle"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i class="fa-regular fa-magnifying-glass"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i class="fa-regular fa-cart-shopping"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i
+                                    class="fa-regular fa-heart"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i
+                                    class="fa-regular fa-shuffle"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i
+                                    class="fa-regular fa-magnifying-glass"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i
+                                    class="fa-regular fa-cart-shopping"></i></a></li>
                     </ul>
                     <div class="product-body">
-                        <h1 class="product-title">Women's leather bag and shoe</h1>
+                        <h2 class="product-title">Women's leather bag and shoe</h2>
                         <button type="button" disabled>Fashion</button>
                         <p>€49.99</p>
                         <div class="product-discount-rating">
@@ -472,16 +507,20 @@
                     <div class="product-background"></div>
                 </div>
                 <div class="product-box small-grid box-3">
-                    <img src="Images/Thumbs/men-sneakers.svg">
+                    <img src="Images/Thumbs/men-sneakers.svg" alt="Placeholder image">
                     <ul class="product-menu">
                         <li><i class="fa-solid fa-circle outofstock"></i></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i class="fa-regular fa-heart"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i class="fa-regular fa-shuffle"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i class="fa-regular fa-magnifying-glass"></i></a></li>
-                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i class="fa-regular fa-cart-shopping"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to favorite</span><i
+                                    class="fa-regular fa-heart"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Compare product</span><i
+                                    class="fa-regular fa-shuffle"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Quick view</span><i
+                                    class="fa-regular fa-magnifying-glass"></i></a></li>
+                        <li><a href="#" tabindex="-1"><span class="tooltiptext">Add to cart</span><i
+                                    class="fa-regular fa-cart-shopping"></i></a></li>
                     </ul>
                     <div class="product-body">
-                        <h1 class="product-title">New look men's sneakers</h1>
+                        <h2 class="product-title">New look men's sneakers</h2>
                         <button type="button" disabled>Fashion</button>
                         <p>€49.99</p>
                         <div class="product-discount-rating">
@@ -503,15 +542,15 @@
     <section class="subscribe">
         <div class="container">
             <div class="subscribe-text">
-                <h1>SUBSCRIBE <span>NOW</span></h1>
+                <h2 class="subscribe-h2">SUBSCRIBE <span>NOW</span></h2>
                 <p>Signup for awesome news about our new products and
                     know our special discounts on products.</p>
                 <div class="email">
                     <input type="text" placeholder="Enter email address">
-                    <button type="button">Subscribe</button>
+                    <button type="button" class="btn-theme">Subscribe</button>
                 </div>
             </div>
-            <div class="gray-box" height="100%">
+            <div class="gray-box">
             </div>
         </div>
     </section>

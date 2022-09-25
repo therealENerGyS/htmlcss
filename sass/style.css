@@ -391,7 +391,7 @@ body {
   width: 17px;
 }
 .main-header > .container .shopping-links a div span {
-  background-color: #20D3C2;
+  background-color: transparent;
   color: #FFFFFF;
   font-family: "Roboto", sans-serif;
   font-size: 0.75rem;

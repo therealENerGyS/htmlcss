@@ -1,0 +1,198 @@
+.main-header {
+    background-color: $color-white;
+    color: $color-theme-dark;
+
+    >.container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include md {
+            flex-direction: row;
+            padding: 2.2rem 1rem;
+        }
+
+        .logo {
+            flex: 2;
+            padding: 1rem 0;
+            user-select: none;
+
+            @include md {
+                padding: 0;
+            }
+        }
+
+        .search {
+            align-items: center;
+            display: none;
+            flex: 4;
+            height: 3rem;
+            justify-content: space-between;
+            user-select: none;
+
+            @include lg {
+                display: flex;
+            }
+
+            input[type=text] {
+                border: 1px solid $color-gray-2;
+                border-bottom-left-radius: $border-radius-medium;
+                border-top-left-radius: $border-radius-medium;
+                height: 100%;
+                text-indent: 1.536rem;
+                width: 100%;
+            }
+
+            button {
+                align-items: center;
+                background-color: $color-theme;
+                border: none;
+                border-bottom-right-radius: $border-radius-medium;
+                border-top-right-radius: $border-radius-medium;
+                color: $color-white;
+                display: flex;
+                font-size: $font-size-18;
+                justify-content: center;
+                padding: 0.938rem;
+
+                &:hover {
+                    background-color: $color-theme-dark;
+                }
+            }
+        }
+
+        // Shopping links start (My account, favorite, compare, cart)
+        .shopping-links {
+            align-items: center;
+            display: flex;
+            flex: 3;
+            justify-content: flex-end;
+            user-select: none;
+
+            a {
+                color: $color-theme-dark;
+                margin: 0 0.4rem;
+                position: relative;
+                text-decoration: none;
+
+                &:hover {
+                    color: $color-theme;
+                }
+
+                &:first-child {
+                    margin: 0 0.5rem 0 0;
+
+                    @include lg {
+                        margin: 0 2rem 0 0;
+                    }
+                }
+
+                &:last-child {
+                    margin: 0 0 0 0.4rem;
+                }
+
+                div {
+                    align-items: center;
+                    background-color: $color-theme;
+                    border-radius: 50%;
+                    bottom: 50%;
+                    display: flex;
+                    height: 17px;
+                    justify-content: center;
+                    left: 50%;
+                    position: absolute;
+                    width: 17px;
+
+                    span {
+                        background-color: transparent;
+                        color: $color-white;
+                        font-family: $font-roboto;
+                        font-size: 0.75rem;
+                        font-weight: $font-weight-regular;
+                        z-index: 1;
+                    }
+                }
+
+                .cart-number {
+                    left: 10%;
+                }
+            }
+        }
+
+        // Shopping links end
+    }
+
+    // Browse categories + special offer button start (Navbar)
+    nav {
+        border-top: 1px solid $color-gray-2;
+
+        >.container {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+
+            .categories {
+                flex: 2;
+                user-select: none;
+
+                .dropdown {
+                    button {
+                        align-items: center;
+                        background-color: $color-theme;
+                        border: none;
+                        color: $color-white;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0.7rem 1rem;
+                        width: 100%;
+
+                        &:hover {
+                            background-color: $color-theme-dark;
+                            color: $color-white;
+                        }
+
+                        &:focus {
+                            background-color: $color-theme-dark;
+                            color: $color-white;
+                        }
+
+                        span {
+                            align-items: center;
+                            display: flex;
+
+                            i {
+                                font-size: 1.2em;
+                            }
+                        }
+                    }
+
+                    .dropdown-menu {
+                        background-color: $color-theme;
+                        border: none;
+                        border-radius: 0;
+                        width: 100%;
+
+                        .dropdown-item {
+                            background-color: $color-theme;
+                            color: $color-white;
+
+                            &:hover {
+                                background-color: $color-theme-dark;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .special-offer {
+                align-items: center;
+                display: flex;
+                flex: 7;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    // Browse categories + special offer button end (Navbar)
+}

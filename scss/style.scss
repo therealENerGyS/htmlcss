@@ -1,0 +1,24 @@
+//External Imports
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+//General Imports
+@import "./core/variables";
+@import "./core/utilities";
+
+//Common page layout
+@import "./sections/top-header";
+@import "./sections/main-header";
+@import "./sections/footer";
+
+//Homepage layout
+@import "./sections/index/shopping-banner";
+@import "./sections/index/shopping-benefits";
+@import "./sections/index/shop-by-category-grid";
+@import "./sections/index/discount-banner";
+@import "./sections/index/flash-sale";
+@import "./sections/index/top-sellers";
+@import "./sections/index/subscribe";
+
+//Account page Layout
+@import "./sections/account/site-bar";
+@import "./sections/account/login-register";

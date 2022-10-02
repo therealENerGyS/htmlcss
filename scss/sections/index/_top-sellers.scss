@@ -1,0 +1,210 @@
+.top-sell {
+    .container {
+        .grid-top-sellers {
+            column-gap: 0.75rem;
+            display: flex;
+            grid-template-columns: repeat(4, minmax(100px, 400px));
+            grid-template-rows: repeat(4, minmax(100px, 150px));
+            justify-content: center;
+            padding: 1rem 0;
+            row-gap: 0.75rem;
+
+            @include lg {
+                display: grid;
+            }
+
+            .product-box {
+                background-color: $color-gray-3;
+                border-radius: $border-radius-small;
+                height: 100%;
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                &:hover {
+                    .product-menu {
+                        top: 5%;
+                    }
+
+                    .product-body {
+                        height: 18%;
+
+                        @include lg {
+                            height: 25%;
+                        }
+                    }
+
+                    .product-background {
+                        height: 100%;
+                    }
+                }
+
+                .product-menu {
+                    background: $color-white;
+                    border: 1px solid black;
+                    border-radius: $border-radius-medium;
+                    font-size: 1.25rem;
+                    list-style: none;
+                    margin: auto;
+                    padding: 0.6rem;
+                    position: absolute;
+                    right: 5%;
+                    top: 100%;
+                    transition: top 0.3s ease-in-out;
+                    z-index: 2;
+
+                    li {
+                        margin-bottom: 0.2rem;
+                        margin-top: 0.2rem;
+
+                        a {
+                            color: $color-gray-0;
+                            display: inline-block;
+                            position: relative;
+
+                            .tooltiptext {
+                                display: none;
+                            }
+
+                            &:hover {
+                                color: $color-theme;
+
+                                .tooltiptext {
+                                    background-color: $color-theme;
+                                    border-radius: 6px;
+                                    color: #fff;
+                                    display: block;
+                                    font-size: $font-size-14;
+                                    margin: 0 1rem;
+                                    padding: 0.313rem 0;
+                                    position: absolute;
+                                    right: 95%;
+                                    text-align: center;
+                                    width: 125px;
+                                    z-index: 1;
+
+                                    &::after {
+                                        border-color: transparent transparent transparent $color-theme;
+                                        border-style: solid;
+                                        border-width: 5px;
+                                        content: " ";
+                                        left: 100%;
+                                        margin-top: -5px;
+                                        position: absolute;
+                                        top: 50%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .product-body {
+                    bottom: 0;
+                    color: $color-white;
+                    height: 2rem;
+                    padding-left: 1.5rem;
+                    position: absolute;
+                    transition: 0.3s ease-in-out;
+                    width: 100%;
+                    z-index: 1;
+
+                    .product-title {
+                        font-size: $font-size-18;
+                        font-weight: $font-weight-regular;
+                        margin-bottom: 0.4rem;
+                    }
+
+                    button {
+                        background-color: transparent;
+                        border: 1px solid whitesmoke;
+                        color: $color-white;
+                        font-size: $font-size-14;
+                        margin: .5rem 0;
+                        padding: 0 0.8em;
+                    }
+
+                    p {
+                        margin-bottom: 0.5rem;
+                        text-decoration: line-through;
+                    }
+
+                    .product-discount-price {
+                        color: $color-theme;
+                        font-size: 1.5em;
+                        font-weight: $font-weight-medium;
+                        margin-bottom: 0;
+                        text-decoration: none;
+                    }
+
+                    .product-discount-rating {
+                        align-items: center;
+                        display: flex;
+                        justify-content: space-between;
+                        padding-right: 2rem;
+
+                        .product-rating {
+                            color: $color-theme;
+                        }
+                    }
+                }
+
+                .product-background {
+                    background-color: $color-theme-dark;
+                    bottom: 0;
+                    height: 3rem;
+                    opacity: 0.90;
+                    position: absolute;
+                    transition: height 0.3s ease-in-out;
+                    width: 100%;
+                }
+            }
+
+            .small-grid {
+                &:hover {
+                    .product-body {
+                        transform: translateY(-85%);
+                    }
+                }
+            }
+
+            .box-1 {
+                grid-column: span 2;
+                grid-row: span 4;
+            }
+
+            .box-2 {
+                display: none;
+                grid-column: span 2;
+                grid-row: span 2;
+
+                @include md {
+                    display: none;
+                }
+
+                @include lg {
+                    display: block;
+                }
+            }
+
+            .box-3 {
+                display: none;
+                grid-column: span 2;
+                grid-row: span 2;
+
+                @include md {
+                    display: none;
+                }
+
+                @include lg {
+                    display: block;
+                }
+            }
+        }
+    }
+}

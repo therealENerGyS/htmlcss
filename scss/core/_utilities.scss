@@ -1,0 +1,312 @@
+html,
+body {
+    color: $color-theme-dark;
+    font-family: $font-roboto;
+    font-size: $font-size-16;
+    font-weight: $font-weight-regular;
+    margin: 0;
+    padding: 0;
+}
+
+//Container style
+.container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    @include md {
+        max-width: $breakpoint-xl-max-width;
+    }
+
+    @include lg {
+        max-width: $breakpoint-lg-max-width;
+    }
+
+    @include xl {
+        max-width: $breakpoint-xl-max-width;
+    }
+
+    @include xxl {
+        max-width: $breakpoint-xxl-max-width;
+    }
+}
+
+// General button theme
+.btn-theme {
+    background-color: $color-theme;
+    border: none;
+    border-radius: $border-radius-medium;
+    color: $color-white;
+    font-weight: $font-weight-medium;
+    padding: 0.4rem 1.6rem;
+    user-select: none;
+
+    &:hover {
+        background-color: $color-theme-dark;
+        color: $color-white;
+    }
+
+    &:focus {
+        background-color: $color-theme-dark;
+        color: $color-white;
+    }
+}
+
+// General white button theme
+.btn-white {
+    background-color: $color-white;
+    border: none;
+    border-radius: $border-radius-medium;
+    color: $color-theme;
+    font-size: $font-size-18;
+    font-weight: $font-weight-medium;
+    margin: 0.938rem 0;
+    padding: 0.625rem 1.6rem;
+
+    &:hover {
+        background-color: $color-theme;
+        color: $color-white;
+    }
+
+    &:focus {
+        background-color: $color-theme;
+        color: $color-white;
+    }
+}
+
+// General style for text sections between content
+.text-section {
+    color: $color-theme-dark;
+    text-align: center;
+    padding-top: 5rem;
+
+    .dark-h2 {
+        font-family: $font-play;
+        font-size: $font-size-36;
+        font-weight: $font-weight-bold;
+
+        span {
+            color: $color-theme;
+        }
+    }
+
+    img {
+        user-select: none;
+    }
+
+    p {
+        padding: 1rem 0;
+    }
+}
+
+// General grid layout
+.products-grid {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 8rem 0;
+
+    @include lg {
+        justify-content: space-between;
+    }
+
+    .product-box {
+        background-color: $color-gray-3;
+        border-radius: $border-radius-small;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        width: 26rem;
+
+        @include md {
+            width: 23rem;
+        }
+
+        @include lg {
+            width: 18rem;
+        }
+
+        @include xl {
+            width: 22rem;
+        }
+
+        @include xxl {
+            width: 26rem;
+        }
+
+        img {
+            height: 400px;
+            width: 100%;
+        }
+
+        &:hover {
+            .product-menu {
+                transform: translateY(-200%);
+            }
+
+            .product-body {
+                transform: translateY(0%);
+            }
+
+            .product-background {
+                transform: translateY(0%);
+            }
+        }
+
+        .product-menu {
+            background: $color-white;
+            border: 1px solid black;
+            border-radius: $border-radius-medium;
+            font-size: 1.25rem;
+            list-style: none;
+            margin: auto;
+            padding: 0.6rem;
+            position: absolute;
+            right: 5%;
+            transform: translateY(0%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 1;
+
+            li {
+                margin-bottom: 0.2rem;
+                margin-top: 0.2rem;
+
+                a {
+                    color: $color-gray-0;
+                    display: inline-block;
+                    position: relative;
+
+                    .tooltiptext {
+                        display: none;
+                    }
+
+                    &:hover {
+                        color: $color-theme;
+
+                        .tooltiptext {
+                            background-color: $color-theme;
+                            border-radius: 6px;
+                            color: #fff;
+                            display: block;
+                            font-size: $font-size-14;
+                            margin: 0 1rem;
+                            padding: 0.313rem 0;
+                            position: absolute;
+                            right: 95%;
+                            text-align: center;
+                            width: 125px;
+                            z-index: 1;
+
+                            &::after {
+                                border-color: transparent transparent transparent $color-theme;
+                                border-style: solid;
+                                border-width: 5px;
+                                content: " ";
+                                left: 100%;
+                                margin-top: -5px;
+                                position: absolute;
+                                top: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .product-body {
+            bottom: 0;
+            color: $color-white;
+            padding: 1rem;
+            position: absolute;
+            transform: translateY(69%);
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+            z-index: 1;
+
+            .product-title {
+                font-size: $font-size-18;
+                font-weight: $font-weight-regular;
+                margin-bottom: 0.4rem;
+            }
+
+            button {
+                background-color: transparent;
+                border: 1px solid whitesmoke;
+                color: $color-white;
+                font-size: $font-size-14;
+                margin: .5rem 0;
+                padding: 0 0.8em;
+            }
+
+            p {
+                margin-bottom: 0.5rem;
+                text-decoration: line-through;
+            }
+
+            .product-discount-rating {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+
+                .product-discount-price {
+                    color: $color-theme;
+                    font-size: 1.5em;
+                    font-weight: $font-weight-medium;
+                    margin-bottom: 0;
+                    text-decoration: none;
+                }
+
+                .product-rating {
+                    color: $color-theme;
+                }
+            }
+        }
+
+        .product-background {
+            background-color: $color-theme-dark;
+            bottom: 0;
+            height: 100%;
+            opacity: 0.90;
+            position: absolute;
+            transform: translateY(87%);
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+
+        }
+    }
+
+    .box-2 {
+        display: none;
+
+        @include md {
+            display: block;
+        }
+
+        @include lg {
+            display: block;
+        }
+    }
+
+    .box-3 {
+        display: none;
+
+        @include md {
+            display: none;
+        }
+
+        @include lg {
+            display: block;
+        }
+    }
+}
+
+// in stock color
+.instock {
+    color: $color-instock;
+}
+
+// out of stock color
+.outofstock {
+    color: $color-outofstock;
+}

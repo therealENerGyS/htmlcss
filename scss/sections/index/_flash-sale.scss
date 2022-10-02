@@ -1,0 +1,106 @@
+.sale {
+    background-color: $color-theme-dark;
+
+    .container {
+        display: flex;
+        height: 27.1875rem;
+        justify-content: space-between;
+
+        .flash-sale {
+            align-items: center;
+            background-color: $color-theme;
+            color: $color-white;
+            display: flex;
+            flex-direction: column;
+            height: 60%;
+            justify-content: center;
+            width: 37%;
+
+            @include md {
+                width: 27%;
+            }
+
+            @include lg {
+                width: 20%;
+            }
+
+            .discount-h2 {
+                font-family: $font-play;
+                font-size: $font-size-60;
+                font-weight: $font-weight-bold;
+                margin: 0;
+            }
+
+            .discount-h3 {
+                font-size: $font-size-24;
+                font-weight: $font-weight-medium;
+                margin: 0.5rem 0;
+            }
+        }
+
+        // Countdown timer
+        .countdown {
+            align-items: center;
+            color: $color-theme;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 60%;
+
+            .date {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                @include md {
+                    width: 80%;
+                }
+
+                @include lg {
+                    margin: 0;
+                    width: 70%;
+                }
+
+                .circle {
+                    align-items: center;
+                    background-color: white;
+                    border: 2px dotted $color-theme;
+                    border-radius: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    height: 80px;
+                    justify-content: center;
+                    margin: .2rem;
+                    width: 80px;
+
+                    @include md {
+                        height: 90px;
+                        width: 90px;
+                    }
+
+                    @include lg {
+                        height: 119px;
+                        width: 119px;
+                    }
+                }
+
+                .time-left {
+                    font-family: $font-play;
+                    font-size: $font-size-36;
+                    font-weight: $font-weight-bold;
+                }
+
+                p {
+                    color: $color-theme-dark;
+                }
+            }
+        }
+
+        button {
+            border-radius: 40px;
+            margin: 0.938rem 0;
+            padding: 0.938rem 1.875rem;
+        }
+    }
+}

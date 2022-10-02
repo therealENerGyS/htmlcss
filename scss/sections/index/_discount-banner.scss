@@ -1,0 +1,67 @@
+.discount-banner {
+    background-color: $color-gray-1;
+
+    .container {
+        align-items: center;
+        display: flex;
+        height: 26.125rem;
+        justify-content: space-between;
+
+        .discount {
+            align-items: center;
+            background-color: $color-theme;
+            color: $color-white;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            width: 45%;
+
+            @include md {
+                width: 30%;
+            }
+
+
+            @include lg {
+                width: 25%;
+            }
+
+            .discount-h2 {
+                font-family: $font-play;
+                font-size: $font-size-60;
+                font-weight: $font-weight-bold;
+
+                span {
+                    font-size: $font-size-36;
+                }
+            }
+
+            button {
+                background-color: $color-theme-dark;
+                border: none;
+                border-radius: $border-radius-medium;
+                color: $color-white;
+                font-size: $font-size-18;
+                font-weight: $font-weight-medium;
+                margin: 0.625rem 0;
+                padding: 0.625rem 1.563rem;
+
+                &:hover {
+                    background-color: $color-white;
+                    color: $color-theme;
+                }
+
+                &:focus {
+                    background-color: $color-white;
+                    color: $color-theme;
+                }
+            }
+        }
+
+        .learn-more {
+            color: $color-white;
+            font-size: $font-size-14;
+            width: 35%;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.subscribe {
+    align-items: center;
+    background-color: $color-gray-4;
+    display: flex;
+    height: 19rem;
+    justify-content: space-between;
+
+    .container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        .subscribe-text {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+
+            @include md {
+                width: 50%;
+            }
+
+            @include lg {
+                width: 32%;
+            }
+
+            .subscribe-h2 {
+                color: $color-theme-dark;
+                font-family: $font-play;
+                font-size: $font-size-36;
+                font-weight: $font-weight-bold;
+
+                span {
+                    color: $color-theme;
+                }
+            }
+
+            .email {
+                align-items: center;
+                background-color: $color-white;
+                border: 1px solid $color-gray-2;
+                border-radius: $border-radius-medium;
+                display: flex;
+                height: 3rem;
+
+                input[type=text] {
+                    border: none;
+                    border-radius: $border-radius-medium;
+                    font-size: $font-size-14;
+                    height: 100%;
+                    text-indent: 1.563rem;
+                    width: 100%;
+                }
+
+                button {
+                    border: none;
+                    margin: 0 .3rem;
+                    padding: 0.5rem 1.2rem;
+                }
+            }
+        }
+
+        .gray-box {
+            background-color: $color-gray-1;
+            height: 19rem;
+            width: 35%;
+
+            @include md {
+                width: 45%;
+            }
+
+            @include lg {
+                width: 50%;
+            }
+        }
+    }
+}

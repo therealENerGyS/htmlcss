@@ -1,0 +1,42 @@
+.shopping-banner {
+    background-color: $color-gray-3;
+
+    .container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        @include lg {
+            justify-content: space-between;
+        }
+
+        .shopping-text {
+            width: 55%;
+
+            @include lg {
+                width: 30%;
+            }
+
+            .shopping-header {
+                display: flex;
+                flex-direction: column;
+                font-family: $font-play;
+                font-size: $font-size-60;
+                padding-bottom: 0.938rem;
+
+                .shopping-bold {
+                    color: $color-theme;
+                    font-weight: $font-weight-bold;
+                }
+            }
+        }
+
+        img {
+            display: none;
+
+            @include lg {
+                display: inline;
+            }
+        }
+    }
+}

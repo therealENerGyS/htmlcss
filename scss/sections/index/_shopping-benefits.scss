@@ -1,0 +1,51 @@
+.shopping-benefits {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        max-width: 500px;
+        padding: 6rem 0;
+
+        @include lg {
+            flex-direction: row;
+            max-width: 1650px;
+        }
+
+        .benefits {
+            align-items: center;
+            background-color: $color-theme-light;
+            border-radius: $border-radius-small;
+            display: flex;
+            flex: 1;
+            margin: 0.4rem 1.4rem;
+            padding: 1.3rem;
+            user-select: none;
+
+            @include lg {
+                margin: 0 1.4rem;
+            }
+
+            &:hover {
+                background-color: $color-theme;
+                color: $color-white;
+
+                img {
+                    filter: brightness(0) invert(1);
+                }
+
+                .benefit-h1 {
+                    color: $color-white;
+                }
+            }
+
+            img {
+                margin-right: 1.5rem;
+            }
+
+            .benefit-h1 {
+                color: $color-theme;
+                font-size: $font-size-16;
+            }
+        }
+    }
+}

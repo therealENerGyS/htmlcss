@@ -1,0 +1,35 @@
+@import "../../core/variables";
+
+.site-bar {
+    align-items: center;
+    background-color: $color-theme-dark-light;
+    color: $color-theme;
+    display: flex;
+    height: 8rem;
+    justify-content: space-between;
+
+    .container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        .site-bar-h1 {
+            font-size: $font-size-24;
+            font-weight: $font-weight-medium;
+        }
+
+        .site-bar-h2 {
+            font-size: $font-size-16;
+            user-select: none;
+
+            a {
+                color: $color-theme;
+                text-decoration: none;
+            }
+
+            span {
+                color: $color-white;
+            }
+        }
+    }
+}
